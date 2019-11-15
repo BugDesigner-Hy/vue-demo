@@ -1,4 +1,5 @@
 module.exports = {
+  lintOnSave: false,
   root: true,
   env: {
     node: true
@@ -8,8 +9,8 @@ module.exports = {
     '@vue/standard'
   ],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+    'no-console': 'off',
+    'no-debugger': 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'
