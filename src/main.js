@@ -9,8 +9,19 @@ import axios from 'axios'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
-Vue.prototype.$http = axios
+
 axios.defaults.baseURL = 'xxxxx'
+
+axios.interceptors.request.use(config => {
+  console.log(config);
+  config.headers.Authorization = window.sessionStorage.getItem('token')
+  return config;
+}, error => {
+  // Do something with request error
+  return Promise.reject(error);
+});
+
+Vue.prototype.$http = axios
 
 new Vue({
   router,
