@@ -39,7 +39,7 @@
         </el-menu>
       </el-aside>
       <el-main>
-        <router-view></router-view>
+          <router-view></router-view>
       </el-main>
     </el-container>
   </el-container>
@@ -56,12 +56,12 @@ export default {
         '3': 'el-icon-eleme'
       },
       isCollapse: false,
-      activePath:''
+      activePath: ''
     }
   },
   created() {
     this.getMenuList(),
-    this.activePath = window.sessionStorage.getItem('activePath')
+      (this.activePath = window.sessionStorage.getItem('activePath'))
   },
   methods: {
     logout() {
@@ -103,8 +103,8 @@ export default {
     toggleCollapse() {
       this.isCollapse = !this.isCollapse
     },
-    saveActivePath(activePath){
-      window.sessionStorage.setItem("activePath",activePath)
+    saveActivePath(activePath) {
+      window.sessionStorage.setItem('activePath', activePath)
       this.activePath = activePath
     }
   }

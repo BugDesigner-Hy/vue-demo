@@ -59,7 +59,12 @@
       ></el-pagination>
     </el-card>
 
-    <el-dialog title="添加用户" :visible.sync="addUserDialogVisible" width="30%">
+    <el-dialog
+      title="添加用户"
+      :visible.sync="addUserDialogVisible"
+      width="30%"
+      @close="addUserDialogClose"
+    >
       <el-form
         :model="addUserForm"
         :rules="addUserFormRules"
@@ -69,13 +74,16 @@
         <el-form-item label="用户名" prop="username">
           <el-input v-model="addUserForm.username"></el-input>
         </el-form-item>
-        <el-form-item label="地址">
+        <el-form-item label="地址" prop="address">
           <el-input v-model="addUserForm.address"></el-input>
+        </el-form-item>
+        <el-form-item label="邮箱" prop="email">
+          <el-input v-model="addUserForm.email"></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
         <el-button @click="addUserDialogVisible = false">取 消</el-button>
-        <el-button type="primary" @click="addUserDialogVisible = false">确 定</el-button>
+        <el-button type="primary" @click="addUser">确 定</el-button>
       </span>
     </el-dialog>
   </div>
@@ -84,6 +92,13 @@
 <script>
 export default {
   data() {
+    var checkEmail = (rule, value, callback) => {
+      const regEmail = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g
+      if (regEmail.test(value)) {
+        return callback()
+      }
+      callback(new Error('请输入合法的邮箱'))
+    }
     return {
       query: '',
       userList: [],
@@ -93,13 +108,19 @@ export default {
       addUserDialogVisible: false,
       addUserForm: {
         username: '',
-        address: ''
+        address: '',
+        email: ''
       },
       addUserFormRules: {
         username: [
           { required: true, message: '请输入用户名', trigger: 'blur' },
           { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
-        ]
+        ],
+        address: [
+          { required: true, message: '请输入用户名', trigger: 'blur' },
+          { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }
+        ],
+        email: [{ validator: checkEmail, trigger: 'blur' }]
       }
     }
   },
@@ -147,6 +168,16 @@ export default {
     },
     statusChange(userInfo) {
       console.log('status:' + userInfo.status)
+    },
+    addUserDialogClose() {
+      this.$refs.addUserFormRef.resetFields()
+    },
+    addUser() {
+      this.$refs.addUserFormRef.validate(valid => {
+        if (!valid) return this.$message.error('valid ' + valid)
+        this.$message.success('addUser success')
+        this.addUserDialogVisible = false
+      })
     }
   }
 }
