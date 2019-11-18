@@ -39,7 +39,7 @@
         </el-menu>
       </el-aside>
       <el-main>
-          <router-view></router-view>
+        <router-view></router-view>
       </el-main>
     </el-container>
   </el-container>
@@ -94,7 +94,9 @@ export default {
           path: '/data',
           children: [
             { id: 31, menuName: 'table', path: '/table' },
-            { id: 32, menuName: 'tag', path: '/tag' }
+            { id: 32, menuName: 'tag', path: '/tag' },
+            { id: 33, menuName: 'step', path: '/step' },
+            { id: 34, menuName: 'chart', path: '/chart' }
           ]
         }
       ]

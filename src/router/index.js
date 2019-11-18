@@ -5,6 +5,8 @@ import Home from '../components/Home'
 import Welcome from '../components/Welcome'
 import Table from '../components/data/Table'
 import Tag from '../components/data/Tag'
+import Step from '../components/data/Step.vue'
+import Chart from '../components/data/Chart.vue'
 
 
 Vue.use(VueRouter)
@@ -33,6 +35,13 @@ const routes = [
     {
       path: '/tag',
       component: Tag
+    },,
+    {
+      path: '/step',
+      component: Step
+    },{
+      path: '/chart',
+      component: Chart
     }]
   }
 ]
