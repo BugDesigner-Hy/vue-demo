@@ -1,12 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../components/Login'
-import Home from '../components/Home'
-import Welcome from '../components/Welcome'
-import Table from '../components/data/Table'
-import Tag from '../components/data/Tag'
-import Step from '../components/data/Step.vue'
-import Chart from '../components/data/Chart.vue'
+// import Login from '../components/Login'
+// import Home from '../components/Home'
+// import Welcome from '../components/Welcome'
+// import Table from '../components/data/Table'
+// import Tag from '../components/data/Tag'
+// import Step from '../components/data/Step.vue'
+// import Chart from '../components/data/Chart.vue'
+// 路由懒加载
+const Login = () => import(/* webpackChunkName: "group-vue" */ '../components/Login')
+const Home = () => import(/* webpackChunkName: "group-vue" */ '../components/Home')
+const Welcome = () => import(/* webpackChunkName: "group-vue" */ '../components/Welcome')
+const Table = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Table')
+const Tag = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Tag')
+const Step = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Step.vue')
+const Chart = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Chart.vue')
 
 Vue.use(VueRouter)
 

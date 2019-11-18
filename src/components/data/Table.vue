@@ -93,7 +93,7 @@
 export default {
   data() {
     var checkEmail = (rule, value, callback) => {
-      const regEmail = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g
+      const regEmail = /^([0-9A-Za-z]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g
       if (regEmail.test(value)) {
         return callback()
       }
