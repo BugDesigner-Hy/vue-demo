@@ -8,20 +8,19 @@ import Tag from '../components/data/Tag'
 import Step from '../components/data/Step.vue'
 import Chart from '../components/data/Chart.vue'
 
-
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: "/",
-    redirect: "/login"
+    path: '/',
+    redirect: '/login'
   },
   {
-    path: "/login",
+    path: '/login',
     component: Login
   },
   {
-    path: "/home",
+    path: '/home',
     component: Home,
     redirect: '/welcome',
     children: [{
@@ -35,11 +34,12 @@ const routes = [
     {
       path: '/tag',
       component: Tag
-    },,
+    },
     {
       path: '/step',
       component: Step
-    },{
+    },
+    {
       path: '/chart',
       component: Chart
     }]
@@ -50,7 +50,7 @@ const router = new VueRouter({
   routes
 })
 
-//挂载路由导航守卫
+// 挂载路由导航守卫
 router.beforeEach((to, from, next) => {
   if (to.path === '/login') return next()
   const token = window.sessionStorage.getItem('token')

@@ -4,7 +4,7 @@
     <el-header>
       <div>
         <img src="../assets/logo.png" alt />
-        <span>vue 组件展示</span>
+        <span>vue 组 件 练 习</span>
       </div>
       <el-button type="info" @click="logout">退出</el-button>
     </el-header>
@@ -60,8 +60,8 @@ export default {
     }
   },
   created() {
-    this.getMenuList(),
-      (this.activePath = window.sessionStorage.getItem('activePath'))
+    this.getMenuList()
+    this.setActivePathBySessionStorage()
   },
   methods: {
     logout() {
@@ -74,19 +74,13 @@ export default {
           id: 1,
           menuName: '基础',
           path: '/basic',
-          children: [
-            { id: 11, menuName: '布局', path: '/layout' },
-            { id: 12, menuName: '容器', path: '/container' }
-          ]
+          children: [{ id: 11, menuName: '布局', path: '/layout' }, { id: 12, menuName: '容器', path: '/container' }]
         },
         {
           id: 2,
           menuName: '表单',
           path: '/form',
-          children: [
-            { id: 21, menuName: '单选框', path: '/radio' },
-            { id: 22, menuName: '多选框', path: '/checkbox' }
-          ]
+          children: [{ id: 21, menuName: '单选框', path: '/radio' }, { id: 22, menuName: '多选框', path: '/checkbox' }]
         },
         {
           id: 3,
@@ -108,6 +102,9 @@ export default {
     saveActivePath(activePath) {
       window.sessionStorage.setItem('activePath', activePath)
       this.activePath = activePath
+    },
+    setActivePathBySessionStorage() {
+      this.activePath = window.sessionStorage.getItem('activePath')
     }
   }
 }
@@ -118,12 +115,12 @@ export default {
   height: 100%;
 }
 .el-header {
-  background-color: #214779;
+  background-color: #424141;
   display: flex;
   justify-content: space-between;
   padding-left: 0;
   align-items: center;
-  color: #c8cfd6;
+  color: #eef3f8;
   font-size: 20px;
 
   div {

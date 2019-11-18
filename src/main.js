@@ -12,7 +12,10 @@ import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 
-Vue.use(VueQuillEditor, /* { default global options } */)
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
+Vue.use(VueQuillEditor)
 
 Vue.config.productionTip = false
 
@@ -21,13 +24,25 @@ Vue.use(ElementUI)
 axios.defaults.baseURL = 'xxxxx'
 
 axios.interceptors.request.use(config => {
-  console.log(config);
+  // loading效果
+  NProgress.start()
+
+  console.log(config)
   config.headers.Authorization = window.sessionStorage.getItem('token')
-  return config;
+  return config
 }, error => {
   // Do something with request error
-  return Promise.reject(error);
-});
+  return Promise.reject(error)
+})
+
+axios.interceptors.response.use(config => {
+  NProgress.done()
+  console.log(config)
+  return config
+}, error => {
+  // Do something with request error
+  return Promise.reject(error)
+})
 
 Vue.prototype.$http = axios
 

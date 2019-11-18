@@ -64,7 +64,7 @@
                 :timestamp="item.timestamp"
                 :icon="item.icon"
                 :color="item.color"
-                size='large'
+                size="large"
               >{{item.msg}}</el-timeline-item>
             </el-timeline>
           </el-tab-pane>
@@ -96,7 +96,6 @@
 </template>
 
 <script>
-import { log } from 'util'
 export default {
   data() {
     return {
@@ -463,25 +462,25 @@ export default {
   },
   methods: {
     cascaderHandleChange() {
-      log(this.goodForm.type)
+      console.log(this.goodForm.type)
     },
     beforeTagLeave(activeName, oldActiveName) {
-      log(this.goodForm.type)
-      if (oldActiveName == '0' && !this.goodForm.type) {
+      console.log(this.goodForm.type)
+      if (oldActiveName === '0' && !this.goodForm.type) {
         this.$message.error('请选择商品类型')
         return false
       }
       this.stepActive = activeName
     },
     checkGroupChange() {
-      log(this.checkedDesignList)
+      console.log(this.checkedDesignList)
     },
     handlePictureCardPreview(file) {
       this.dialogImageUrl = file.url
       this.dialogVisible = true
     },
     handlePictureCardRemove(file, fileList) {
-      log(file, fileList)
+      console.log(file, fileList)
     },
     addGood() {
       this.$notify({

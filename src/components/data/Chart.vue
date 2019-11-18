@@ -29,7 +29,6 @@ export default {
   },
   mounted() {
     // 基于准备好的dom，初始化echarts实例
-
     var myChart = echarts.init(document.getElementById('chart'))
     // 指定图表的配置项和数据
     var option = {
@@ -52,7 +51,6 @@ export default {
         }
       ]
     }
-
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option)
 
@@ -88,9 +86,8 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
-.el-row{
-    margin-top: 20px;
+.el-row {
+  margin-top: 20px;
 }
 </style>
