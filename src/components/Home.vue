@@ -4,7 +4,7 @@
     <el-header>
       <div>
         <img src="../assets/logo.png" alt />
-        <span>vue 组 件 练 习</span>
+        <span>Vue&前端 练习</span>
       </div>
       <el-button type="info" @click="logout">退出</el-button>
     </el-header>
@@ -78,19 +78,13 @@ export default {
         },
         {
           id: 2,
-          menuName: '表单',
-          path: '/form',
-          children: [{ id: 21, menuName: '单选框', path: '/radio' }, { id: 22, menuName: '多选框', path: '/checkbox' }]
-        },
-        {
-          id: 3,
-          menuName: '数据',
+          menuName: 'Vue',
           path: '/data',
           children: [
-            { id: 31, menuName: 'table', path: '/table' },
-            { id: 32, menuName: 'tag', path: '/tag' },
-            { id: 33, menuName: 'step', path: '/step' },
-            { id: 34, menuName: 'chart', path: '/chart' }
+            { id: 21, menuName: 'table', path: '/table' },
+            { id: 22, menuName: 'tag', path: '/tag' },
+            { id: 23, menuName: 'step', path: '/step' },
+            { id: 24, menuName: 'chart', path: '/chart' }
           ]
         }
       ]

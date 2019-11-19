@@ -15,6 +15,7 @@ const Table = () => import(/* webpackChunkName: "group-vue" */ '../components/da
 const Tag = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Tag')
 const Step = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Step.vue')
 const Chart = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Chart.vue')
+const Layout = () => import(/* webpackChunkName: "group-vue" */ '../components/basic/layout.vue')
 
 Vue.use(VueRouter)
 
@@ -50,6 +51,10 @@ const routes = [
     {
       path: '/chart',
       component: Chart
+    },
+    {
+      path: '/layout',
+      component: Layout
     }]
   }
 ]
