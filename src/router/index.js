@@ -16,6 +16,7 @@ const Tag = () => import(/* webpackChunkName: "group-vue" */ '../components/data
 const Step = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Step.vue')
 const Chart = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Chart.vue')
 const Layout = () => import(/* webpackChunkName: "group-vue" */ '../components/basic/layout.vue')
+const Icon = () => import(/* webpackChunkName: "group-vue" */ '../components/data/Icon.vue')
 
 Vue.use(VueRouter)
 
@@ -55,6 +56,10 @@ const routes = [
     {
       path: '/layout',
       component: Layout
+    },
+    {
+      path: '/icon',
+      component: Icon
     }]
   }
 ]

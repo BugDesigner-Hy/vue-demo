@@ -6,4 +6,4 @@
 - [x] css  flex布局相关 
 - [ ] node相关
 - [ ] ES6相关
-- [ ] iconfont导入
+- [x] iconfont导入

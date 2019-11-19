@@ -84,7 +84,8 @@ export default {
             { id: 21, menuName: 'table', path: '/table' },
             { id: 22, menuName: 'tag', path: '/tag' },
             { id: 23, menuName: 'step', path: '/step' },
-            { id: 24, menuName: 'chart', path: '/chart' }
+            { id: 24, menuName: 'chart', path: '/chart' },
+            { id: 25, menuName: 'icon', path: '/icon' }
           ]
         }
       ]
