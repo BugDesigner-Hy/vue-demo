@@ -8,7 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Counter: typeof import('./../../src/components/counter.vue')['default']
-    'IMaterialSymbols:add': typeof import('~icons/material-symbols/add')['default']
+    'IAntDesign:minusOutlined': typeof import('~icons/ant-design/minus-outlined')['default']
     'IMdi:themeLightDark': typeof import('~icons/mdi/theme-light-dark')['default']
     'IOcticon:dot24': typeof import('~icons/octicon/dot24')['default']
     'IPh:numberCircleEightLight': typeof import('~icons/ph/number-circle-eight-light')['default']

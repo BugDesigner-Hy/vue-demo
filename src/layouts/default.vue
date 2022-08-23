@@ -8,6 +8,6 @@
 </template>
 
 <script setup lang="ts">
-import { NMessageProvider, darkTheme } from 'naive-ui'
-const { isDark, toggleDark } = useDarks()
+import { NMessageProvider } from 'naive-ui'
+const { toggleDark } = useDarks()
 </script>
