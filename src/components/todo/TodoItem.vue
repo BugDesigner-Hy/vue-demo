@@ -8,7 +8,8 @@
 					class="flex items-center cursor-pointer my-1 h-7"
 				>
 					<div class="flex items-center">
-						<i-octicon:dot-24 class="mr-1" /> {{ showContent(item.content) }}
+						<i-mdi:emoticon-wink-outline class="mr-1" />
+						{{ showContent(item.content) }}
 					</div>
 					<div class="ml-auto">
 						<i-mdi:minus
