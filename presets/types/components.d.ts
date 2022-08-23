@@ -10,6 +10,8 @@ declare module '@vue/runtime-core' {
     Counter: typeof import('./../../src/components/counter.vue')['default']
     'IAntDesign:minusOutlined': typeof import('~icons/ant-design/minus-outlined')['default']
     'IMdi:emoticonWinkOutline': typeof import('~icons/mdi/emoticon-wink-outline')['default']
+    'IMdi:formatListBulleted': typeof import('~icons/mdi/format-list-bulleted')['default']
+    'IMdi:home': typeof import('~icons/mdi/home')['default']
     'IMdi:minus': typeof import('~icons/mdi/minus')['default']
     'IMdi:themeLightDark': typeof import('~icons/mdi/theme-light-dark')['default']
     'IOcticon:dot24': typeof import('~icons/octicon/dot24')['default']

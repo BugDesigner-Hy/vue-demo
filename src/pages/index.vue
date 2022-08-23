@@ -1,22 +1,19 @@
 <script setup lang="ts">
-const { isDark, toggleDark } = useDarks()
-
-const { t, toggleLocale, language } = useLanguage()
-
-const theme = computed(() => (isDark.value ? 'dark' : 'light'))
+import { projects } from '~/api/project'
 </script>
 
 <template>
-	<div class="m-6">Hello，This is the tov template！！</div>
-	<div class="cursor-pointer m-6" @click="toggleDark()">theme: {{ theme }}</div>
-
-	<div class="cursor-pointer mt-6 ml-6" @click="toggleLocale()">
-		<div>language: {{ language }}</div>
-		<div>base: {{ t('about') }}</div>
-		<div>nesting: {{ t('nesting.sir') }} {{ t('nesting.lady') }}</div>
+	<div class="flex-col justify-center items-center w-60 mx-auto mt-20">
+		<div class="text-3xl font-bold mb-5">Projects</div>
+		<div
+			v-for="(project, index) in projects"
+			:key="index"
+			class="pl-2 my-2 text-lg text-gray-500 hover:text-gray-700"
+		>
+			<router-link :to="project.link" class="flex items-center h-10">
+				<div class="mt-2"><i-mdi:format-list-bulleted /></div>
+				<div class="ml-2">{{ project.name }}</div>
+			</router-link>
+		</div>
 	</div>
-
-	<Counter />
-
-	<router-link to="/todo/" class="ml-6">project one : todo</router-link>
 </template>
