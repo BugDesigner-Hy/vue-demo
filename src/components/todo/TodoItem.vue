@@ -11,7 +11,7 @@
 						<i-octicon:dot-24 class="mr-1" /> {{ showContent(item.content) }}
 					</div>
 					<div class="ml-auto">
-						<i-ant-design:minus-outlined
+						<i-mdi:minus
 							v-show="!isOutside"
 							@click.prevent="todoStore.remove(item.id)"
 						/>
