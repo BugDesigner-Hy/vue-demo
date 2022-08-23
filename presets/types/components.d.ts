@@ -12,6 +12,7 @@ declare module '@vue/runtime-core' {
     'IMdi:themeLightDark': typeof import('~icons/mdi/theme-light-dark')['default']
     'IOcticon:dot24': typeof import('~icons/octicon/dot24')['default']
     'IPh:numberCircleEightLight': typeof import('~icons/ph/number-circle-eight-light')['default']
+    'IRi:addFill': typeof import('~icons/ri/add-fill')['default']
     'IUil:minus': typeof import('~icons/uil/minus')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

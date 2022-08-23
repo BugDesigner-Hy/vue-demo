@@ -12,8 +12,8 @@
 					class="outline-none w-220px pl-4 bg-transparent"
 					@keyup.enter="add"
 				/>
-				<button @click="add" class="flex items-center ml-auto">
-					<i-material-symbols:add />
+				<button class="flex items-center ml-auto" @click="add">
+					<i-ri:add-fill />
 				</button>
 			</div>
 			<todoItem :items="todoStore.items"></todoItem>
@@ -33,9 +33,9 @@ function add() {
 		return
 	}
 	if (todoStore.items.length >= 8) {
-		message.warning("oops! you can't add more",{
-            showIcon:false
-        })
+		message.warning("oops! you can't add more", {
+			showIcon: false,
+		})
 	}
 	todoStore.add(todoStore.newContent)
 	todoStore.newContent = ''
