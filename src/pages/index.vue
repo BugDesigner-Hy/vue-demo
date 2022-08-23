@@ -17,4 +17,6 @@ const theme = computed(() => (isDark.value ? 'dark' : 'light'))
 	</div>
 
 	<Counter />
+
+	<router-link to="/todo/" class="ml-6">project one : todo</router-link>
 </template>
