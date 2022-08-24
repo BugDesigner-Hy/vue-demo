@@ -1,15 +1,9 @@
 <template>
 	<div class="absolute top-5 right-5 flex justify-center items-center text-lg">
-		<div
-			class="mx-2 cursor-pointer text-gray-500 hover:text-gray-700"
-			@click="toggleDark()"
-		>
+		<div class="item" @click="toggleDark()">
 			<i-mdi:theme-light-dark />
 		</div>
-		<router-link
-			class="mx-2 cursor-pointer text-gray-500 hover:text-gray-700"
-			to="/"
-		>
+		<router-link class="item" to="/">
 			<i-mdi:home />
 		</router-link>
 	</div>
@@ -22,3 +16,12 @@
 import { NMessageProvider } from 'naive-ui'
 const { toggleDark } = useDarks()
 </script>
+
+<style scoped>
+.item {
+	@apply mx-2 cursor-pointer text-gray-500;
+}
+.item:hover {
+	@apply text-gray-700 dark:text-light-200;
+}
+</style>
