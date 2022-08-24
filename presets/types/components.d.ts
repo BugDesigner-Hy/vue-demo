@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     'IPh:numberCircleEightLight': typeof import('~icons/ph/number-circle-eight-light')['default']
     'IRi:addFill': typeof import('~icons/ri/add-fill')['default']
     'IUil:minus': typeof import('~icons/uil/minus')['default']
+    Nav: typeof import('./../../src/components/nav/Nav.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TodoItem: typeof import('./../../src/components/todo/TodoItem.vue')['default']
