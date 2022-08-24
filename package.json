@@ -32,6 +32,8 @@
 		"node": ">=14"
 	},
 	"devDependencies": {
+		"@iconify-json/ic": "^1.1.9",
+		"@iconify-json/iconoir": "^1.1.8",
 		"@iconify-json/mdi": "^1.1.30",
 		"@iconify-json/ph": "^1.1.2",
 		"@iconify-json/ri": "^1.1.3",

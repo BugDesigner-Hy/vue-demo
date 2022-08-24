@@ -17,7 +17,7 @@ export const projects: Array<Project> = [
 	{
 		id: 2,
 		name: 'color-pick',
-		brief: '中国风颜色拾取',
+		brief: '中国风颜色',
 		link: '/color',
 		icon: 'mdi:format-list-bulleted',
 	},

@@ -9,6 +9,10 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Counter: typeof import('./../../src/components/counter.vue')['default']
     'IAntDesign:minusOutlined': typeof import('~icons/ant-design/minus-outlined')['default']
+    'IIc:outlineDarkMode': typeof import('~icons/ic/outline-dark-mode')['default']
+    'IIc:outlineLightMode': typeof import('~icons/ic/outline-light-mode')['default']
+    'IIconoir:github': typeof import('~icons/iconoir/github')['default']
+    'IIconoir:home': typeof import('~icons/iconoir/home')['default']
     'IMdi:emoticonWinkOutline': typeof import('~icons/mdi/emoticon-wink-outline')['default']
     'IMdi:formatListBulleted': typeof import('~icons/mdi/format-list-bulleted')['default']
     'IMdi:home': typeof import('~icons/mdi/home')['default']

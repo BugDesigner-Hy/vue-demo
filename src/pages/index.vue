@@ -3,9 +3,10 @@ import { projects } from '~/api/project'
 </script>
 
 <template>
-	<div class="flex-col justify-center items-center w-60 mx-auto mt-20">
-		<div class="text-3xl font-bold mb-5">Projects</div>
-
+	<div class="text-3xl font-bold mx-auto text-center pl-20 pr-40 mt-25 mb-5">
+		Projects
+	</div>
+	<div class="grid grid-cols-2 gap-2 place-items-center w-120 mx-auto">
 		<div
 			v-for="(project, index) in projects"
 			:key="index"
@@ -25,17 +26,23 @@ import { projects } from '~/api/project'
 </template>
 
 <style scoped>
+.item {
+	@apply w-60;
+}
+
 .item:hover {
-	@apply bg-gray-50 dark:bg-black  transition duration-500 ease-in-out;
+	@apply bg-gray-50 dark: bg-inherit transition duration-500 ease-in-out;
 
 	.icon {
-		@apply text-gray-500 dark:text-light-200;
+		@apply text-gray-500 dark: text-light-200;
 	}
+
 	.title {
-		@apply text-gray-600 dark:text-light-200;
+		@apply text-gray-600 dark: text-light-200;
 	}
+
 	.brief {
-		@apply text-gray-400 dark:text-light-200;
+		@apply text-gray-400 dark: text-light-200;
 	}
 }
 </style>
