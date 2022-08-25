@@ -9,4 +9,13 @@ export default defineConfig({
 		},
 	},
 	plugins: [Tov()],
+	server: {
+		proxy: {
+			'/colors.json': {
+				target: 'http://zhongguose.com/colors.json',
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/colors.json/, ''),
+			},
+		},
+	},
 })
