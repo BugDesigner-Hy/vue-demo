@@ -26,6 +26,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
+		"seemly": "^0.3.6",
 		"vue": "^3.2.37"
 	},
 	"engines": {

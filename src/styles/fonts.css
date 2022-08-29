@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'lixukexinshu';/*这里属性值可以自定义,用的时候和定义的一致即可*/
+    src: url('/public/LiXuKeMaoBiXingShu-1.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
