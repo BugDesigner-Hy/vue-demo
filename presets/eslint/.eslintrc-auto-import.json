@@ -82,7 +82,6 @@
     "refThrottled": true,
     "refWithControl": true,
     "resolveComponent": true,
-    "resolveDirective": true,
     "resolveRef": true,
     "resolveUnref": true,
     "setActivePinia": true,
