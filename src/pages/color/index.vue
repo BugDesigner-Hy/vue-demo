@@ -90,7 +90,7 @@
 				</div>
 			</transition>
 			<div class="basis-1/2 flex flex-col justify-start items-start">
-				<img src="/public/color/flower.png" class="pt-20" />
+				<img src="/color/flower.png" class="pt-20" />
 			</div>
 		</div>
 	</div>
@@ -129,7 +129,12 @@ let curColor = ref<ColorItem>({
 	pinyin: 'zhongguose',
 })
 
-function getCurColor(color: ColorItem) {
+// function getCurColor(color: ColorItem) {
+// 	curColor.value = color
+// 	copy(color.hex)
+// }
+
+let getCurColor = (color: ColorItem): void => {
 	curColor.value = color
 	copy(color.hex)
 }
