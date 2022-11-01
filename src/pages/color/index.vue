@@ -111,6 +111,7 @@ const CMYK_COLOR: string[] = ['#0093D3', '#CC006B', '#FFF10C', '#333']
 //     url: '/colors.json',
 //     method: 'get',
 // })
+
 let colorList = colorJson
 let search = ref('')
 if (search.value) {
