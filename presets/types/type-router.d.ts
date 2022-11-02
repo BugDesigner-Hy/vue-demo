@@ -10,9 +10,6 @@ import type {
   RouteLocationResolvedTypedList,
   RouteLocationNormalizedTypedList,
   RouteLocationNormalizedLoadedTypedList,
-  RouteLocationAsString,
-  RouteLocationAsRelativeTypedList,
-  RouteLocationAsPathTypedList,
 
   // helper types
   // route definitions
@@ -29,8 +26,8 @@ import type {
   UseLinkFnTyped,
 
   // data fetching
-  _DataLoader,
-  _DefineLoaderOptions,
+  DataLoader,
+  DefineLoaderOptions,
 } from 'unplugin-vue-router'
 
 declare module 'vue-router/auto/routes' {
@@ -38,8 +35,8 @@ declare module 'vue-router/auto/routes' {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
     '/[...notFound]': RouteRecordInfo<'/[...notFound]', '/:notFound(.*)', { notFound: ParamValue<true> }, { notFound: ParamValue<false> }>,
     '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
-    '/color/': RouteRecordInfo<'/color/', '/color', Record<never, never>, Record<never, never>>,
-    '/todo/': RouteRecordInfo<'/todo/', '/todo', Record<never, never>, Record<never, never>>,
+    '/color/': RouteRecordInfo<'/color/', '/color/', Record<never, never>, Record<never, never>>,
+    '/todo/': RouteRecordInfo<'/todo/', '/todo/', Record<never, never>, Record<never, never>>,
   }
 }
 
@@ -72,14 +69,6 @@ declare module 'vue-router/auto' {
   export type RouteLocation<Name extends keyof RouteNamedMap = keyof RouteNamedMap> = RouteLocationTypedList<RouteNamedMap>[Name]
 
   /**
-   * Type safe version of `RouteLocationRaw` . Allows passing the name of the route to be passed as a generic.
-   */
-  export type RouteLocationRaw<Name extends keyof RouteNamedMap = keyof RouteNamedMap> =
-    | RouteLocationAsString<RouteNamedMap>
-    | RouteLocationAsRelativeTypedList<RouteNamedMap>[Name]
-    | RouteLocationAsPathTypedList<RouteNamedMap>[Name]
-
-  /**
    * Generate a type safe params for a route location. Requires the name of the route to be passed as a generic.
    */
   export type RouteParams<Name extends keyof RouteNamedMap> = RouteNamedMap[Name]['params']
@@ -96,8 +85,6 @@ declare module 'vue-router/auto' {
   export function onBeforeRouteLeave(guard: NavigationGuard<RouteNamedMap>): void
   export function onBeforeRouteUpdate(guard: NavigationGuard<RouteNamedMap>): void
 
-  // Experimental Data Fetching
-
   export function defineLoader<
     P extends Promise<any>,
     Name extends keyof RouteNamedMap = keyof RouteNamedMap,
@@ -105,22 +92,15 @@ declare module 'vue-router/auto' {
   >(
     name: Name,
     loader: (route: RouteLocationNormalizedLoaded<Name>) => P,
-    options?: _DefineLoaderOptions<isLazy>,
-  ): _DataLoader<Awaited<P>, isLazy>
+    options?: DefineLoaderOptions<isLazy>,
+  ): DataLoader<Awaited<P>, isLazy>
   export function defineLoader<
     P extends Promise<any>,
     isLazy extends boolean = false,
   >(
     loader: (route: RouteLocationNormalizedLoaded) => P,
-    options?: _DefineLoaderOptions<isLazy>,
-  ): _DataLoader<Awaited<P>, isLazy>
-
-  export {
-    _definePage as definePage,
-    _HasDataLoaderMeta as HasDataLoaderMeta,
-    _setupDataFetchingGuard as setupDataFetchingGuard,
-    _stopDataFetchingScope as stopDataFetchingScope,
-  } from 'unplugin-vue-router/runtime'
+    options?: DefineLoaderOptions<isLazy>,
+  ): DataLoader<Awaited<P>, isLazy>
 }
 
 declare module 'vue-router' {
