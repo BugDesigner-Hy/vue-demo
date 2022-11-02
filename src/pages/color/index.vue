@@ -20,7 +20,7 @@
 									:show-indicator="false"
 									color="#fff"
 									rail-color="#bdbec0"
-									stroke-width="30"
+									:stroke-width="30"
 									style="width: 25px; height: 25px"
 								>
 								</n-progress>
