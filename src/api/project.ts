@@ -25,7 +25,7 @@ export const projects: Array<Project> = [
 		id: 3,
 		name: 'css-sidebar',
 		brief: 'css练手',
-		link: '/sidebar',
+		link: '/css/sidebar',
 		icon: 'mdi:format-list-bulleted',
 	},
 ]

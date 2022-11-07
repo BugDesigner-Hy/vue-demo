@@ -1,5 +1,5 @@
 <template>
-	<div class="wrap" :class="`bg-[${bgColor}]`">
+	<div class="wrap">
 		<div class="header">
 			<div class="avatar">
 				<img class="rounded-1" src="/avatar/avatar.jpeg" />
@@ -9,10 +9,7 @@
 				<div class="job">IT</div>
 			</div>
 		</div>
-		<div
-			class="divide w-auto h-2px border"
-			:class="`border-[${contentColor}]`"
-		></div>
+		<div class="divide w-auto h-2px border border-[#fafee4]"></div>
 
 		<div class="menu">
 			<div v-for="menu in menus" :key="menu.id" class="menu-item">
@@ -24,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-const bgColor = ref('teal')
+// const bgColor = ref('teal')
 const contentColor = ref('#fafee4')
 
 type MENU = {
@@ -58,7 +55,7 @@ const menus = reactive<MENU[]>([
 
 <style scoped>
 .wrap {
-	@apply h-screen w-80px duration-250 ease-in-out overflow-hidden p-8px rounded-md;
+	@apply h-screen w-80px duration-250 ease-in-out overflow-hidden p-8px rounded-md bg-[teal];
 	&:hover {
 		@apply w-200px;
 	}

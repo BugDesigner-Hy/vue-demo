@@ -36,7 +36,7 @@ declare module 'vue-router/auto/routes' {
     '/[...notFound]': RouteRecordInfo<'/[...notFound]', '/:notFound(.*)', { notFound: ParamValue<true> }, { notFound: ParamValue<false> }>,
     '/about': RouteRecordInfo<'/about', '/about', Record<never, never>, Record<never, never>>,
     '/color/': RouteRecordInfo<'/color/', '/color/', Record<never, never>, Record<never, never>>,
-    '/sidebar/': RouteRecordInfo<'/sidebar/', '/sidebar/', Record<never, never>, Record<never, never>>,
+    '/css/sidebar/': RouteRecordInfo<'/css/sidebar/', '/css/sidebar/', Record<never, never>, Record<never, never>>,
     '/todo/': RouteRecordInfo<'/todo/', '/todo/', Record<never, never>, Record<never, never>>,
   }
 }
