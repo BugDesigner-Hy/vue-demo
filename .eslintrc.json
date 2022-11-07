@@ -26,18 +26,18 @@
 		// prettier 作为规则
 		"prettier/prettier": "error",
 		// 禁止使用 var，而应该用 let 或 const
-		"no-var": "error"
-		// "@typescript-eslint/explicit-module-boundary-types": "off"
+		"no-var": "error",
+		"@typescript-eslint/explicit-module-boundary-types": "off"
 	},
-	"overrides": [
-		{
-			// enable the rule specifically for TypeScript files
-			"files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
-			"rules": {
-				"@typescript-eslint/explicit-module-boundary-types": "error"
-			}
-		}
-	],
+	// "overrides": [
+	// 	{
+	// 		// enable the rule specifically for TypeScript files
+	// 		"files": ["*.ts", "*.mts", "*.cts", "*.tsx"],
+	// 		"rules": {
+	// 			"@typescript-eslint/explicit-module-boundary-types": "error"
+	// 		}
+	// 	}
+	// ],
 	"globals": {
 		"defineOptions": true
 	}

@@ -11,7 +11,7 @@
 					<div class="h-3" :class="`bg-[${color.hex}]`"></div>
 					<div class="flex flex-row justify-around h-40">
 						<div class="flex flex-col">
-							<div v-for="(item, index) in color.CMYK" :key="index">
+							<div v-for="(item, id) in color.CMYK" :key="id">
 								<n-progress
 									class="mt-2"
 									type="circle"

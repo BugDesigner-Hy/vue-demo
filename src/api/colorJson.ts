@@ -1,5 +1,5 @@
 import { ColorItem } from '~/types/ColorItem'
-export const colorJson:Array<ColorItem>  = [
+export const colorJson: Array<ColorItem> = [
 	{
 		CMYK: [4, 5, 18, 0],
 		RGB: [249, 244, 220],

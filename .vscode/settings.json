@@ -18,7 +18,7 @@
 		"editor.defaultFormatter": "vscode.json-language-features"
 	},
 	"[vue]": {
-		"editor.defaultFormatter": "Vue.volar"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"

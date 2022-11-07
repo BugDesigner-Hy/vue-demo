@@ -5,11 +5,11 @@ export default defineConfig({
 	darkMode: 'class',
 	attributify: false, // 属性化css，默认关闭
 	plugins: [Typography()],
-	theme:{
-		extend:{
-			fontFamily:{
-				sans:['Microsoft YaHei', '微软雅黑', 'Helvetica','lixukexinshu'],
-			}
-		}
-	}
+	theme: {
+		extend: {
+			fontFamily: {
+				sans: ['Microsoft YaHei', '微软雅黑', 'Helvetica', 'lixukexinshu'],
+			},
+		},
+	},
 })

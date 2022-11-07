@@ -43,7 +43,6 @@ import VueMarcos from 'unplugin-vue-macros/vite'
 import { VueRouterExports } from 'unplugin-vue-router'
 import { AutoImportResolvers, normalizeResolvers } from './shared/resolvers'
 
-
 export default () => {
 	return [
 		// https://github.com/sxzz/unplugin-vue-macros/blob/main/README-zh-CN.md
@@ -77,7 +76,7 @@ export default () => {
 		}),
 		// windicss 插件
 		Windicss({
-			transformCSS:'pre',
+			transformCSS: 'pre',
 			safelist: markdownWrapperClasses,
 		}),
 		// mock 服务

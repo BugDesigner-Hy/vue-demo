@@ -23,9 +23,9 @@ export const projects: Array<Project> = [
 	},
 	{
 		id: 3,
-		name: 'something',
-		brief: '',
-		link: '/something',
+		name: 'css-sidebar',
+		brief: 'css练手',
+		link: '/sidebar',
 		icon: 'mdi:format-list-bulleted',
 	},
 ]
