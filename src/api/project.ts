@@ -24,8 +24,15 @@ export const projects: Array<Project> = [
 	{
 		id: 3,
 		name: 'css-sidebar',
-		brief: 'css练手',
+		brief: 'css练手-侧边栏',
 		link: '/css/sidebar',
+		icon: 'mdi:format-list-bulleted',
+	},
+	{
+		id: 4,
+		name: 'css-panLoader',
+		brief: 'css练手-煎蛋',
+		link: '/css/pan-loader',
 		icon: 'mdi:format-list-bulleted',
 	},
 ]
