@@ -39,6 +39,7 @@ declare module 'vue-router/auto/routes' {
     '/css/pan-loader/': RouteRecordInfo<'/css/pan-loader/', '/css/pan-loader/', Record<never, never>, Record<never, never>>,
     '/css/sidebar/': RouteRecordInfo<'/css/sidebar/', '/css/sidebar/', Record<never, never>, Record<never, never>>,
     '/todo/': RouteRecordInfo<'/todo/', '/todo/', Record<never, never>, Record<never, never>>,
+    '/vue/practice/': RouteRecordInfo<'/vue/practice/', '/vue/practice/', Record<never, never>, Record<never, never>>,
   }
 }
 

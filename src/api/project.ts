@@ -35,4 +35,11 @@ export const projects: Array<Project> = [
 		link: '/css/pan-loader',
 		icon: 'mdi:format-list-bulleted',
 	},
+	{
+		id: 5,
+		name: 'vue-practice',
+		brief: 'vue语法练习',
+		link: '/vue/practice',
+		icon: 'mdi:format-list-bulleted',
+	},
 ]
